@@ -1,3 +1,5 @@
+#pgm que sume 2 decimales y devuelva el resultado
+
 SET SERVEROUTPUT ON;
 
 DECLARE
