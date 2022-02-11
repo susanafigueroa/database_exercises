@@ -1,3 +1,5 @@
+#tiene que pedirle al usuario que inserte el nombre, y contesta Hola 'nombre'
+
 SET SERVEROUTPUT ON;
 
 DECLARE
