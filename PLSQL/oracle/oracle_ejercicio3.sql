@@ -1,3 +1,5 @@
+#pgm que calcule el área de la circunferencia
+
 SET SERVEROUTPUT ON;
 
 DECLARE
@@ -9,6 +11,6 @@ BEGIN
 
 radio := &radio;
 
-DBMS_OUTPUT.PUT_LINE('el radio de la circumferencia es : ' || radio || ' y el �rea es ' ||pi*(radio*radio));
+DBMS_OUTPUT.PUT_LINE('el radio de la circumferencia es : ' || radio || ' y el área es ' ||pi*(radio*radio));
 
 END;
