@@ -1,3 +1,5 @@
+#pgm que muestre la fecha actual
+
 SET SERVEROUTPUT ON;
 
 DECLARE
