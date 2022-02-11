@@ -1,4 +1,4 @@
-#tiene que pedirle al usuario que inserte el nombre, y contesta Hola 'nombre'
+#tiene que pedirle al usuario que inserte el nombre, y conteste Hola 'nombre'
 
 SET SERVEROUTPUT ON;
 
