@@ -1,4 +1,5 @@
 create database proves;
+
 use proves;
 
 
