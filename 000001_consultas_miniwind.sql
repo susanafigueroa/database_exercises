@@ -7,7 +7,7 @@ use miniwind;
 -- Los datos que se tienen que mostrar son:
 	-- el identificador del empleado
 	-- el apellido
-	-- la posición laboral (job_title) que ocupa
+	-- la posiciÃ³n laboral (job_title) que ocupa
 
 select * from employees e;
 
@@ -29,8 +29,7 @@ from employees e
 where e.last_name like 'J%';
 
 
-
--- Ejercicio3: Muestra los apellidos de la tabla employees que tengan una "e" en la segunda posición.
+-- Ejercicio3: Muestra los apellidos de la tabla employees que tengan una "e" en la segunda posiciÃ³n.
 
 select * from employees e;
 
@@ -50,7 +49,7 @@ where e.first_name like 'T%' and e.first_name like '%e%';
 
 
 
--- Ejercicio5: Muestra el apellido de los empleados, la posición de los cuales es "Sales Manager", "Sales Representative", o "Sales Coordinator".
+-- Ejercicio5: Muestra el apellido de los empleados, la posiciÃ³n de los cuales es "Sales Manager", "Sales Representative", o "Sales Coordinator".
 
 select * from employees e;
 
@@ -70,7 +69,7 @@ where e.job_title not like ('Sales Manager') and (e.job_title not like 'Sales Re
 
 
 
--- Ejercicio8: Muestra una lista de empleados de Washington que sepan francés (se dice en las notas) y de Atlanta que no sepan.
+-- Ejercicio8: Muestra una lista de empleados de Washington que sepan francÃ©s (se dice en las notas) y de Atlanta que no sepan.
 -- Queremos ver su identificador, el nombre, el apellido, la ciudad y las notas.
 
 select * from employees e;
@@ -81,7 +80,7 @@ where e.notes like '%French%';
 
 
 
--- Ejercicio9: Muestra el nombre y el proveedor de los productos de la tabla products que sean solo del proveedor (supplier_ids) número 4 o solo del 10.
+-- Ejercicio9: Muestra el nombre y el proveedor de los productos de la tabla products que sean solo del proveedor (supplier_ids) nÃºmero 4 o solo del 10.
 
 select * from products p;
 
@@ -101,7 +100,7 @@ where (p.supplier_ids != 4) and (p.supplier_ids != 10);
 
 
 
--- Ejercicio11: Obtén el nombre y el precio de los productos de los cuales (list_price) están comprendidos entre 10 y 20 (incluídos).
+-- Ejercicio11: ObtÃ©n el nombre y el precio de los productos de los cuales (list_price) estÃ¡n comprendidos entre 10 y 20 (incluÃ­dos).
 
 select * from products p;
 
@@ -111,7 +110,7 @@ where p.list_price between 10 and 20;
 
 
 
--- Ejercicio12: Obtén el nombre y el precio de los productos el precio de los cuales NO está comprendido entre 10 y 20.
+-- Ejercicio12: ObtÃ©n el nombre y el precio de los productos el precio de los cuales NO estÃ¡ comprendido entre 10 y 20.
 
 select * from products p;
 
@@ -121,8 +120,8 @@ where p.list_price not between 10 and 20;
 
 
 
--- Ejercicio13: Obtén el nombre de los productos, el precio y el número del proveedor que tengan un precio superior a
--- 20 y que sean solo del proveedor número 4 o solo del número 10. Escribe la sentencia de dos formas distintas.
+-- Ejercicio13: ObtÃ©n el nombre de los productos, el precio y el nÃºmero del proveedor que tengan un precio superior a
+-- 20 y que sean solo del proveedor nÃºmero 4 o solo del nÃºmero 10. Escribe la sentencia de dos formas distintas.
 
 select * from products p;
 
