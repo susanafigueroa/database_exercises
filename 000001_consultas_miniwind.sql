@@ -13,7 +13,8 @@ select * from employees e;
 
 select e.id, e.first_name, e.last_name, e.job_title 
 from employees e
-where e.city = 'Washington';
+where e.city = 'Washington'
+order by e.last_name;
 
 
 
@@ -47,6 +48,11 @@ select e.first_name
 from employees e
 where e.first_name like 'T%' and e.first_name like '%e%';
 
+	-- otra manera:
+select e.first_name
+from employees e
+where e.first_name like 'T%e%';
+
 
 
 -- Ejercicio5: Muestra el apellido de los empleados, la posición de los cuales es "Sales Manager", "Sales Representative", o "Sales Coordinator".
@@ -57,9 +63,14 @@ select e.first_name, e.last_name, e.job_title
 from employees e
 where e.job_title like ('Sales Manager') or (e.job_title like 'Sales Representative') or (e.job_title like 'Sales Coordinator');
 
+	-- otra manera:
+select e.first_name, e.last_name, e.job_title
+from employees e
+where e.job_title in ('Sales Manager', 'Sales Representative', 'Sales Coordinator');
 
 
--- Ejercicio7: Muestra los apellidos de los empleados que no ocupen ninguna de las tres posiciones anteriores.
+
+-- Ejercicio6: Muestra los apellidos de los empleados que no ocupen ninguna de las tres posiciones anteriores.
 
 select * from employees e;
 
@@ -67,20 +78,30 @@ select e.first_name, e.last_name, e.job_title
 from employees e
 where e.job_title not like ('Sales Manager') and (e.job_title not like 'Sales Representative') and (e.job_title not like 'Sales Coordinator');
 
+	-- otra manera:
+select e.first_name, e.last_name, e.job_title
+from employees e
+where e.job_title != 'Sales Manager' and e.job_title != 'Sales Representative' and e.job_title != 'Sales Coordinator');
+
+	-- otra manera:
+select e.first_name, e.last_name, e.job_title
+from employees e
+where e.job_title nott in('Sales Manager', 'Sales Representative', 'Sales Coordinator');
 
 
--- Ejercicio8: Muestra una lista de empleados de Washington que sepan francés (se dice en las notas) y de Atlanta que no sepan.
+
+-- Ejercicio7: Muestra una lista de empleados de Washington que sepan francés (se dice en las notas) y de Atlanta que no sepan.
 -- Queremos ver su identificador, el nombre, el apellido, la ciudad y las notas.
 
 select * from employees e;
 
 select e.id, e.first_name, e.last_name, e.city, e.notes
 from employees e
-where e.notes like '%French%';
+where (e.city = 'Washington' and e.notes like '%French%') or (e.city = 'Atlanta' and e.notes not like '%French%');
 
 
 
--- Ejercicio9: Muestra el nombre y el proveedor de los productos de la tabla products que sean solo del proveedor (supplier_ids) número 4 o solo del 10.
+-- Ejercicio8: Muestra el nombre y el proveedor de los productos de la tabla products que sean solo del proveedor (supplier_ids) número 4 o solo del 10.
 
 select * from products p;
 
@@ -88,9 +109,14 @@ select p.product_name, p.supplier_ids
 from products p
 where (p.supplier_ids = 4) or (p.supplier_ids = 10);
 
+	-- otra manera:
+select p.product_name, p.supplier_ids
+from products p
+where p.supplier_ids in (4, 10);
 
 
--- Ejercicio10: Muestra el nombre y el proveedor de los productos de la tabla productos que NO sean solo del proveedor 4 ni solo del 10.
+
+-- Ejercicio9: Muestra el nombre y el proveedor de los productos de la tabla productos que NO sean solo del proveedor 4 ni solo del 10.
 
 select * from products p;
 
@@ -100,7 +126,7 @@ where (p.supplier_ids != 4) and (p.supplier_ids != 10);
 
 
 
--- Ejercicio11: Obtén el nombre y el precio de los productos de los cuales (list_price) están comprendidos entre 10 y 20 (incluídos).
+-- Ejercicio10: Obtén el nombre y el precio de los productos de los cuales (list_price) están comprendidos entre 10 y 20 (incluídos).
 
 select * from products p;
 
@@ -108,9 +134,16 @@ select p.product_name, p.list_price
 from products p
 where p.list_price between 10 and 20;
 
+	-- otra manera:
+select * from products p;
+
+select p.product_name, p.list_price
+from products p
+where p.list_price >= 10 and p.list_price <= 20;
 
 
--- Ejercicio12: Obtén el nombre y el precio de los productos el precio de los cuales NO está comprendido entre 10 y 20.
+
+-- Ejercicio11: Obtén el nombre y el precio de los productos el precio de los cuales NO está comprendido entre 10 y 20.
 
 select * from products p;
 
@@ -120,7 +153,7 @@ where p.list_price not between 10 and 20;
 
 
 
--- Ejercicio13: Obtén el nombre de los productos, el precio y el número del proveedor que tengan un precio superior a
+-- Ejercicio12: Obtén el nombre de los productos, el precio y el número del proveedor que tengan un precio superior a
 -- 20 y que sean solo del proveedor número 4 o solo del número 10. Escribe la sentencia de dos formas distintas.
 
 select * from products p;
@@ -129,4 +162,10 @@ select p.product_name, p.list_price, p.supplier_ids
 from products p
 where (p.list_price > 20) and ((p.supplier_ids = 4) or (p.supplier_ids=10));
 
+	-- otra manera:
+select * from products p;
+
+select p.product_name, p.list_price
+from products p
+where p.list_price > 20 and (p.supplier_ids in (4, 10);
 
