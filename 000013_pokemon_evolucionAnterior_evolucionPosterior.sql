@@ -1,11 +1,11 @@
--- 000014 _ Pedir al usuario un número de la pokedex.
--- Comprobar que este número existe.
--- Mirar si este pokemon evoluciona o viene de alguna evolución.
+-- 000013 _ Pedir al usuario un nÃºmero de la pokedex.
+-- Comprobar que este nÃºmero existe.
+-- Mirar si este pokemon evoluciona o viene de alguna evoluciÃ³n.
 -- Mostrar el siguiente mensaje por consola (Ejemplos)
--- El pokemon Charmander no tiene evolución previa y evoluciona a Charmeleon.//numero_pokedex = 4
+-- El pokemon Charmander no tiene evoluciÃ³n previa y evoluciona a Charmeleon.//numero_pokedex = 4
 -- El pokemon Zapdos no tiene evolucion previa ni posterior.
 -- El pokemon Ivisaur (2) origen(1): Bulbasaur y evolucionado(3) en Venusaur.
--- El pokemon Charizard evoluciona de Charmeleon y ya no evoluciona más.
+-- El pokemon Charizard evoluciona de Charmeleon y ya no evoluciona mÃ¡s.
 
 -- buscar si el pp.numero_pokedex se encuentra en la tabla:
 
@@ -21,7 +21,7 @@ from pok_pokemon pp
 where pp.numero_pokedex = 4;
 
 -- hago el select para encontrar el pokemon evolucionado
--- yo sé que pok_pokemon.numero_pokedex = pok_evoluciona_de.pokemon_origen
+-- yo sÃ© que pok_pokemon.numero_pokedex = pok_evoluciona_de.pokemon_origen
 -- por lo tanto voy a buscar el evolucionado 
 
 Select pokev.pokemon_evolucionado
@@ -41,8 +41,8 @@ where pp.numero_pokedex = (
 
 
 
--- ahora tengo que mirar si el pokemon tiene evolución previa
--- por lo tanto el pp.numero_pokedex pasará a ser el evolucionado
+-- ahora tengo que mirar si el pokemon tiene evoluciÃ³n previa
+-- por lo tanto el pp.numero_pokedex pasarÃ¡ a ser el evolucionado
 
 Select pp.nombre
 from pok_pokemon pp
