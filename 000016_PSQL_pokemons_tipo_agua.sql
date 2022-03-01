@@ -1,4 +1,4 @@
--- que muestre los pokemons tipo agua dentro de un rango añadido por el usuario
+-- que muestre los pokemons tipo agua dentro de un rango aÃ±adido por el usuario
 
 
 SET SERVEROUTPUT ON;
