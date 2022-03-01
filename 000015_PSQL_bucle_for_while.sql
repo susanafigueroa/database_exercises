@@ -1,5 +1,5 @@
 -- Ejercicio 9: Programar un script que nos muestre los numeros entre un rango.
--- El rango mínimo es 1 y el maximo se le tiene que preguntar al usuario.
+-- El rango mÃ­nimo es 1 y el maximo se le tiene que preguntar al usuario.
 -- a) programar el script usando FOR
 -- b) programar el script usando WHILE
 
