@@ -9,14 +9,14 @@
     -- 20 - Marketing - El salario medio de este departamento es de 21000
     
 -- ejemplo query 1: necesito sacar la media del salario, para ello necesito el sumatorio de los distintos
--- salarios que le corresponden al department_id específico, en este caso uso como
+-- salarios que le corresponden al department_id especÃ­fico, en este caso uso como
 -- ejemplo el department_id = 50:
 Select sum(e.salary) 
 from employees e
 where e.department_id = 50;
 
 -- ejemplo query 2: para hacer la media, necesito la cantidad de empleados que hay en el departamento
--- específico, realizo el count con el ejemplo de department_id = 50:
+-- especÃ­fico, realizo el count con el ejemplo de department_id = 50:
 Select count(e.employee_id)
 from employees e
 where e.department_id = 50;
