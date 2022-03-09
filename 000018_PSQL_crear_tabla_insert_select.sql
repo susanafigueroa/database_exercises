@@ -1,14 +1,29 @@
--- EJERCICIO3:
+-- EJERCICIO2:
+
+-- Modificar el script del ejercicio 1 para que si el salario medio del 
+-- departamento es menor a 6000 entonces insertar en la nueva tabla M los datos
+-- de los trabajadores, con su salario con una subida del 30%.
+
+-- creacion de la tabla M:
+
+    create table M (
+        employee_id int not null primary key,
+        department_id int not null,
+        new_salary number(5) not null,
+        constraint fk1 foreign key (employee_id) references employees(employee_id),
+        constraint fk2 foreign key (department_id) references departments(department_id));
+
 
 -- RESPUESTA:
 SET SERVEROUTPUT ON;
 
 DECLARE
-    -- variable donde guardare el departamento insertado por el usuario:
+    -- variable para guardar el department_id introducido por el usuario:
     idDep employees.department_id%TYPE;
     
-    -- variable para guardar la cantidad de empleados de un departamento:
-    count;
+    -- variable para guardar el salario total del departamiento introducido por
+    -- el usuario:
+    salario number(10);
 
     -- variable para guardar la cantidad de trabajadores que trabajan en el 
     -- departamento introducido por el usuario:
