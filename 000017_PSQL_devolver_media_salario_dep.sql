@@ -1,3 +1,5 @@
+-- usando BASE DATOS HR
+
 -- EJERCICIO1:
 
 -- Bloque PL/SQL que devuelva el salario de un departamento, introducido por el
