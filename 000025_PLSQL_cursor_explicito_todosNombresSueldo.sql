@@ -1,6 +1,7 @@
 set serveroutput on;
 
 -- MUESTRA TODOS LOS SUELDOS DE LA TABLA EMPLEADO CON SUS NOMBRES:
+-- USAR LA BASE DE DATOS QUE SE ENCUENTRA EN EL ARCHIVO: 000024_A_PLSQL_cursor_explicito_base_de_datos_para_el_ejercicio.sql
 -- ejemplo de como trabaja un cursor recorriendo datos en una tabla
 -- ejemplo de como trabaja un cursor actualizando datos de una tabla
 
