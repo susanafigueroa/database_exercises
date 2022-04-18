@@ -2,27 +2,6 @@
 entre la fecha de pedido y la fecha de entrega
 para un pedido introducido por el usuario.*/
 
-/*Ejemplo de función:
-create or replace function Pagos_cliente(v_codigocliente clientes.codigocliente%type)
-return Number
-as
-  v_sumapagos pagos.cantidad%type := 0;
-begin
-   
-  select sum(cantidad) into v_sumapagos
-  from pagos
-  where codigocliente = v_codigocliente;
- 
-  return v_sumapagos;
- 
-end;
-/
-
-/*Ejemplo de llamada de la función:
-select Pagos_cliente(3) as Pagos_cliente_3 
-from dual;
-
-
 /*para calcular los días que hay entre dos fechas:
 select trunc(fecha_final)-trunc(fecha_inicial)*/
 
