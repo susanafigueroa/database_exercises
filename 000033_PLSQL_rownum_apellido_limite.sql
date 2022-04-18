@@ -1,5 +1,5 @@
 /*3- Escribir un procedimiento almacenado que visualice el apellido 
-y el limite de credito de los cinco clientes que m·s
+y el limite de credito de los cinco clientes que m√°s
 dinero se han gastado.*/
 
 
