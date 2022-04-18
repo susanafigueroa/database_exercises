@@ -1,8 +1,8 @@
-/*2- Desarrolla una función llamada DifDias que devuelva la diferencia de días
+/*2- Desarrolla una funciÃ³n llamada DifDias que devuelva la diferencia de dÃ­as
 entre la fecha de pedido y la fecha de entrega
 para un pedido introducido por el usuario.*/
 
-/*Ejemplo de función:
+/*Ejemplo de funciÃ³n:
 create or replace function Pagos_cliente(v_codigocliente clientes.codigocliente%type)
 return Number
 as
@@ -18,12 +18,12 @@ begin
 end;
 /
 
-/*Ejemplo de llamada de la función:
+/*Ejemplo de llamada de la funciÃ³n:
 select Pagos_cliente(3) as Pagos_cliente_3 
 from dual;
 
 
-/*para calcular los días que hay entre dos fechas:
+/*para calcular los dÃ­as que hay entre dos fechas:
 select trunc(fecha_final)-trunc(fecha_inicial)*/
 
 create or replace function DifDias(codigo jardineria_pedido.codigo_pedido%TYPE)
@@ -31,7 +31,7 @@ return Number
 as
   dias number(5);
 begin
-   
+  
   select trunc(jardineria_pedido.fecha_entrega)-trunc(jardineria_pedido.fecha_pedido) into dias
   from jardineria_pedido jardineria_pedido
   where jardineria_pedido.codigo_pedido = codigo;
