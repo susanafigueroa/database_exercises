@@ -1,7 +1,7 @@
 /*
 4- Procedimiento almacenado que al pasarle un codigo de cliente, nos liste lo siguiente
 ( en el mismo formato que la imagen )
-- Código cliente, nombre, ciudad, pais
+- CÃ³digo cliente, nombre, ciudad, pais
 - Cantidad total pagada.
 Omitir los pagos realizados.
 */
@@ -20,10 +20,10 @@ begin
     select ciudad into ciudad from jardineria_cliente where codigo_cliente = codigo;
     select pais into pais from jardineria_cliente where codigo_cliente = codigo;
     
-    dbms_output.put_line('Código Cliente: '|| codigo);
+    dbms_output.put_line('CÃ³digo Cliente: '|| codigo);
     dbms_output.put_line('Nombre Cliente: '|| nom);
     dbms_output.put_line('Ciudad Cliente: '|| ciudad);
-    dbms_output.put_line('País Cliente: '|| pais);
+    dbms_output.put_line('PaÃ­s Cliente: '|| pais);
     
     select sum(jp.total) into totalPagos from jardineria_cliente jc
     inner join jardineria_pago jp on jp.codigo_cliente = jc.codigo_cliente 
